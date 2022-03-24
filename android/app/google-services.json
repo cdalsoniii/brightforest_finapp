@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "635614457971",
+    "project_id": "finwallet-d9b90",
+    "storage_bucket": "finwallet-d9b90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635614457971:android:a703f2c2df623593d1ba06",
+        "android_client_info": {
+          "package_name": "com.flutterflow.finwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635614457971-gabmp78ciqb0j0vddldhqoqonc6d6a1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIEbKAGjzb8NwxHQ_DUExVf4jHS47w3nI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635614457971-gabmp78ciqb0j0vddldhqoqonc6d6a1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "635614457971-pmjngr19rdavk16bjm7nvbhtk717haoq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.finwallet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
