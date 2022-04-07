@@ -106,8 +106,7 @@ class _TransactionADDWidgetState extends State<TransactionADDWidget>
       body: Form(
         key: formKey,
         autovalidateMode: AutovalidateMode.disabled,
-        child: SingleChildScrollView(
-      child:Column(
+        child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Material(
@@ -464,7 +463,7 @@ class _TransactionADDWidgetState extends State<TransactionADDWidget>
                   ),
             ),
           ],
-        )),
+        ),
       ),
     );
   }
