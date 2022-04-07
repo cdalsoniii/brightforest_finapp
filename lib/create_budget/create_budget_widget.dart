@@ -56,13 +56,14 @@ class _CreateBudgetWidgetState extends State<CreateBudgetWidget>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Form(
         key: formKey,
         autovalidateMode: AutovalidateMode.disabled,
-        child: Column(
+        child: SingleChildScrollView(
+      child:Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Material(
@@ -353,7 +354,7 @@ class _CreateBudgetWidgetState extends State<CreateBudgetWidget>
                   ),
             ),
           ],
-        ),
+        )),
       ),
     );
   }

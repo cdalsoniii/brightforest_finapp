@@ -156,7 +156,8 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
-      body: Column(
+      body: SingleChildScrollView(
+      child:Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Material(
@@ -517,7 +518,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                 ),
           ).animated([animationsMap['textOnPageLoadAnimation']]),
         ],
-      ),
+      )),
     );
   }
 }
