@@ -143,7 +143,7 @@ class _RequestFundsWidgetState extends State<RequestFundsWidget> {
                           'Office Budget',
                           'External Transfer',
                           'ACH Payment'
-                        ].toList(),
+                        ],
                         onChanged: (val) => setState(() => dropDownValue = val),
                         width: MediaQuery.of(context).size.width * 0.9,
                         height: 60,

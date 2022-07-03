@@ -18,6 +18,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
     'rowOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 22),
@@ -33,6 +34,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
     'columnOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),

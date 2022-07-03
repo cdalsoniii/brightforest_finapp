@@ -25,6 +25,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
     'rowOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 30),
@@ -40,6 +41,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
     'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 49),
@@ -54,6 +56,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 50,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 51),
@@ -68,6 +71,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 80,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 69),

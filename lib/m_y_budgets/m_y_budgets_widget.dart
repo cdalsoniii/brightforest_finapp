@@ -22,6 +22,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
     'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 200,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 49),
@@ -36,6 +37,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 200,
       delay: 50,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 51),
@@ -50,6 +52,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 150,
       delay: 90,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 26),

@@ -26,6 +26,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
     'rowOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 30),
@@ -41,6 +42,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
     'buttonOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 47),
@@ -55,6 +57,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 100,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -69,6 +72,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 140,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 70),
@@ -83,6 +87,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 170,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 80),
@@ -97,6 +102,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 270,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 82),
@@ -111,6 +117,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: -220,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, -0.0),
@@ -127,6 +134,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: -220,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         scale: 0.4,
@@ -348,7 +356,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                           'Internal Transfer',
                           'External Transfer',
                           'ACH Payment'
-                        ].toList(),
+                        ],
                         onChanged: (val) =>
                             setState(() => dropDownValue1 = val),
                         width: MediaQuery.of(context).size.width * 0.9,
@@ -381,7 +389,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                           'Account ****2010',
                           'Account ****2011',
                           'Account ****2012'
-                        ].toList(),
+                        ],
                         onChanged: (val) =>
                             setState(() => dropDownValue2 = val),
                         width: MediaQuery.of(context).size.width * 0.9,

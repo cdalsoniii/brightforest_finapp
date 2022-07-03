@@ -35,6 +35,7 @@ class _TransactionEDITWidgetState extends State<TransactionEDITWidget>
     'textFieldOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 40),
@@ -49,6 +50,7 @@ class _TransactionEDITWidgetState extends State<TransactionEDITWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 170,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 80),
@@ -63,6 +65,7 @@ class _TransactionEDITWidgetState extends State<TransactionEDITWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 200,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 100),
@@ -77,6 +80,7 @@ class _TransactionEDITWidgetState extends State<TransactionEDITWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 230,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 120),
@@ -242,7 +246,7 @@ class _TransactionEDITWidgetState extends State<TransactionEDITWidget>
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.number,
                               validator: (val) {
-                                if (val.isEmpty) {
+                                if (val == null || val.isEmpty) {
                                   return 'Please enter an amount';
                                 }
 

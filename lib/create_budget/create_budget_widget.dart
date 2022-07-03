@@ -28,6 +28,7 @@ class _CreateBudgetWidgetState extends State<CreateBudgetWidget>
     'textFieldOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 40),
@@ -180,7 +181,7 @@ class _CreateBudgetWidgetState extends State<CreateBudgetWidget>
                             style: FlutterFlowTheme.of(context).title1,
                             textAlign: TextAlign.center,
                             validator: (val) {
-                              if (val.isEmpty) {
+                              if (val == null || val.isEmpty) {
                                 return 'Please enter an amount';
                               }
 

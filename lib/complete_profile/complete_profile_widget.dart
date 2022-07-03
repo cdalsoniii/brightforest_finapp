@@ -31,6 +31,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       curve: Curves.bounceOut,
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 19),
@@ -45,6 +46,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 50,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 20),
@@ -59,6 +61,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 100,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 20),
@@ -73,6 +76,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 200,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 40),
@@ -87,6 +91,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 200,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 60),
@@ -102,6 +107,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 400,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 40),
@@ -117,6 +123,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 400,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         offset: Offset(0, 40),
@@ -188,18 +195,22 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       pickerFontFamily: 'Lexend Deca',
                     );
                     if (selectedMedia != null &&
-                        validateFileFormat(
-                            selectedMedia.storagePath, context)) {
+                        selectedMedia.every((m) =>
+                            validateFileFormat(m.storagePath, context))) {
                       showUploadMessage(
                         context,
                         'Uploading file...',
                         showLoading: true,
                       );
-                      final downloadUrl = await uploadData(
-                          selectedMedia.storagePath, selectedMedia.bytes);
+                      final downloadUrls = (await Future.wait(selectedMedia.map(
+                              (m) async =>
+                                  await uploadData(m.storagePath, m.bytes))))
+                          .where((u) => u != null)
+                          .toList();
                       ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                      if (downloadUrl != null) {
-                        setState(() => uploadedFileUrl = downloadUrl);
+                      if (downloadUrls != null &&
+                          downloadUrls.length == selectedMedia.length) {
+                        setState(() => uploadedFileUrl = downloadUrls.first);
                         showUploadMessage(
                           context,
                           'Success!',

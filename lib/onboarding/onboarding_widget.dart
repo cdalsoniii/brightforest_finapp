@@ -23,6 +23,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
     'imageOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
+      hideBeforeAnimating: false,
       fadeIn: true,
       initialState: AnimationState(
         scale: 0.6,

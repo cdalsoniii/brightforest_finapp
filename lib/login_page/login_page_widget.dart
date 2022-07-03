@@ -201,6 +201,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         () => passwordLoginVisibility =
                                             !passwordLoginVisibility,
                                       ),
+                                      focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
                                         passwordLoginVisibility
                                             ? Icons.visibility_outlined

@@ -206,6 +206,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         () => passwordCreateVisibility =
                                             !passwordCreateVisibility,
                                       ),
+                                      focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
                                         passwordCreateVisibility
                                             ? Icons.visibility_outlined
@@ -270,6 +271,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         () => passwordConfirmVisibility =
                                             !passwordConfirmVisibility,
                                       ),
+                                      focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
                                         passwordConfirmVisibility
                                             ? Icons.visibility_outlined
@@ -293,8 +295,8 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                     0, 24, 0, 24),
                                 child: FFButtonWidget(
                                   onPressed: () async {
-                                    if (passwordCreateController.text !=
-                                        passwordConfirmController.text) {
+                                    if (passwordCreateController?.text !=
+                                        passwordConfirmController?.text) {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
